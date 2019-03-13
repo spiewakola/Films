@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wyszukiwarka filmów</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4" id="cards">
+            <div class="card" style="width: 21rem;">
+                <i class="fas fa-camera-retro fa-5x"></i>
+               
+                <div class="card-body">
+                    <form  action="wynik.php" method="GET">
+                        <div class="form-group">
+                            <input type="text" name="tytul"  class="form-control" id="exampleInputPassword1" placeholder="Tytuł">
+                            <div class="form-group"></div>
+                            <input  name="rezyser" class="form-control" id="exampleInputEmail1" 
+                                    placeholder="Reżyser">
+                            </div>
+                            
+                            <div class="form-group">
+
+                                <input  name="rok" class="form-control" id="exampleInputPassword1" placeholder="Rok">
+                                <!-- <div class="form-group"></div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                      <button class="btn btn-outline-secondary dropdown-toggle" name="gatunek" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Gatunek</button>
+                                      <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Komedia</a>
+                                        <a class="dropdown-item" href="#">Dramat</a>
+                                        <a class="dropdown-item" href="#">Obyczajowy</a>
+                                        <a class="dropdown-item" href="#">Horror</a>
+                                        
+                                      </div>
+                                  
+                                  
+
+                            </div>
+                            <div role="separator" class="dropdown-divider"></div>
+
+                            <div class="form-check"> -->
+                                
+                            </div>
+                            <button type="submit" class="btn btn-primary">Wyszukaj</button>
+                            
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-4"></div>
+    </div>
+    </div>
+</div>
+</body>
+</html>
