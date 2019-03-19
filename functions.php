@@ -1,16 +1,24 @@
 <?php
-function redirectWithMessage($message, $pageName){
+
+function redirectToIndexWithMessage($message){
     $_SESSION['message'] = $message;
-    header("Location: ./$pageName");
+    header("Location: ./index.php");
     die();
 }
 
 function wyswietlanie(){
     $db = getDB();
-     $query = $db->prepare("SELECT * FROM filmy WHERE (tytul=? AND rezyser = ? AND rok=?)");
-    $query->execute([$_GET['tytul'], $_GET['rezyser'], $_GET['rok']]);
+    $query = $db->prepare("SELECT * FROM filmy WHERE tytul LIKE ?  OR rezyser LIKE ? OR rezyser LIKE ?");
+    $tytul = (!empty($_GET['tytul']))?$_GET['tytul']."%":"";
+    $rezyser = (!empty($_GET['rezyser']))?$_GET['rezyser']."%":"";
+    $rok = (!empty($_GET['rok']))?$_GET['rok']."%":"";
+    // if(!empty($_GET['tytul'])){
+    //     $title= $_GET['tytul']."%";
+    // }else{
+    //     $title= "";
+    // }
+    $query->execute([$tytul, $rezyser, $rok]);
     return $query->fetchAll(PDO::FETCH_ASSOC);
-    
 }
 function getDB(){
     $host = '127.0.0.1'; 

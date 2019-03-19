@@ -43,7 +43,7 @@ require_once 'functions.php';
   <tbody>
   <?php foreach (wyswietlanie() as $result):?>
     <tr>
-      <th scope="row">1</th>
+      <th scope="row"><?php echo $result['id'] ?></th>
       <td><?php echo $result['tytul'] ?></td>
       <td><?php echo $result['rezyser'] ?></td>
       <td><?php echo $result['rok'] ?></td>

@@ -1,3 +1,8 @@
+<?php
+session_start();
+require_once 'functions.php';
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,12 +24,11 @@
 <body>
     <div class="container">
     <div class="row">
-        <div class="col-4"></div>
-        <div class="col-4" id="cards">
-            <div class="card" style="width: 21rem;">
+        <div class="offset-4 col-4" id="cards">
+            <div class="card" id="searchCard" style="width: 21rem;">
                 <i class="fas fa-camera-retro fa-5x"></i>
                
-                <div class="card-body">
+                <div class="card-body text-center">
                     <form  action="wynik.php" method="GET">
                         <div class="form-group">
                             <input type="text" name="tytul"  class="form-control" id="exampleInputPassword1" placeholder="Tytuł">
@@ -36,27 +40,9 @@
                             <div class="form-group">
 
                                 <input  name="rok" class="form-control" id="exampleInputPassword1" placeholder="Rok">
-                                <!-- <div class="form-group"></div>
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                      <button class="btn btn-outline-secondary dropdown-toggle" name="gatunek" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Gatunek</button>
-                                      <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="#">Komedia</a>
-                                        <a class="dropdown-item" href="#">Dramat</a>
-                                        <a class="dropdown-item" href="#">Obyczajowy</a>
-                                        <a class="dropdown-item" href="#">Horror</a>
-                                        
-                                      </div>
-                                  
-                                  
-
+                             
                             </div>
-                            <div role="separator" class="dropdown-divider"></div>
-
-                            <div class="form-check"> -->
-                                
-                            </div>
-                            <button type="submit" class="btn btn-primary">Wyszukaj</button>
+                            <button type="submit" class="btn btn-dark ">Wyszukaj</button>
                             
 
                     </form>
@@ -64,7 +50,6 @@
                 </div>
             </div>
         </div>
-        <div class="col-4"></div>
     </div>
     </div>
 </div>
